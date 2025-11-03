@@ -7,9 +7,12 @@ import kotlin.system.measureTimeMillis
  * Main entry point for the Kotlin Reactive Programming application
  * Demonstrates the use of kotlinx.coroutines for asynchronous programming
  */
+
+private const val SEPARATOR_LENGTH = 60
+
 suspend fun main() {
     println("🚀 Kotlin Reactive Programming Examples with Coroutines")
-    println("=" .repeat(60))
+    println("=" .repeat(SEPARATOR_LENGTH))
     
     // Example 1: Basic Coroutines
     runBasicCoroutineExample()
@@ -28,7 +31,7 @@ suspend fun main() {
  */
 suspend fun runBasicCoroutineExample() {
     println("\n📌 Example 1: Basic Coroutines")
-    println("-" .repeat(60))
+    println("-" .repeat(SEPARATOR_LENGTH))
     
     coroutineScope {
         launch {
@@ -46,7 +49,7 @@ suspend fun runBasicCoroutineExample() {
  */
 suspend fun runConcurrentExample() {
     println("\n📌 Example 2: Concurrent Execution with async/await")
-    println("-" .repeat(60))
+    println("-" .repeat(SEPARATOR_LENGTH))
     
     val time = measureTimeMillis {
         coroutineScope {
@@ -63,7 +66,7 @@ suspend fun runConcurrentExample() {
  */
 suspend fun runStructuredConcurrencyExample() {
     println("\n📌 Example 3: Structured Concurrency")
-    println("-" .repeat(60))
+    println("-" .repeat(SEPARATOR_LENGTH))
     
     coroutineScope {
         launch {
